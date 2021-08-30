@@ -1,14 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from '../styles.module.scss'
 
 import Image from 'next/image'
 import Link from "next/Link"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import TermsClient from "../../../../modals/TermsClient"
 
 export default function Step1() {
+  const [isTermsVisible, setIsTermsVisible] = useState(false)
+
+  const showTerms = () => {
+    setIsTermsVisible(true)
+  }
+
   return (
     <div className={styles.container}>
+      
       <header>
         <Link href="/register-client">
           <button className={styles.backBtn}>
@@ -50,11 +58,9 @@ export default function Step1() {
         <div className={styles.terms}>
           <input type="checkbox" name="" id="" />
 
-          <p>Li e aceito os <strong>Termos de Uso</strong></p>
+          <p>Li e aceito os <strong onClick={showTerms}>Termos de Uso</strong></p>
           {/* ainda estamos desenvolvendo os termos */}
         </div>
-
-        {/* <p>Passo 1 de 4</p>      */}
         
         <div className={styles.steps}>
           <p className={styles.completedStep}>
@@ -89,6 +95,10 @@ export default function Step1() {
           <button className={styles.cancel}>Cancelar meu cadastro</button>
         </Link>
       </section>
+
+      {isTermsVisible ? (
+        <TermsClient />
+      ) : null}
     </div>
   )
 }

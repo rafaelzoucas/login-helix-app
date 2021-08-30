@@ -1,0 +1,92 @@
+.modalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgba($color: #000000, $alpha: 0.70);
+
+    z-index: 1000;
+
+    .termsContainer {
+        width: 90vw;
+        max-height: 80vh;
+
+        background-color: #fff;
+
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 1.5rem;
+
+            :last-child {
+                margin-top: 0.5rem;
+
+                color: var(--gray-300);
+            }
+        }
+        
+        overflow-y: scroll;
+        .terms {
+            background: var(--gray-100);
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            border-radius: 0 0 10px 10px;
+
+            h4 {
+                font-weight: 500;
+                margin-top: 1rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            h6 {
+                margin-top: 0.5rem;
+                margin-left: 1rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+        }
+
+        .actionBtns {
+            display: flex;
+            flex-direction: row;
+
+
+            width: 100%;
+
+            padding-top: 1.5rem;
+
+            button {
+                padding: 1rem;
+
+                background: none;
+
+                border-radius: 5px;
+
+                color: var(--orange-700);
+            }
+
+            :first-child {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            :last-child {
+                margin-left: 1rem;
+                width: 200%;
+                background: var(--orange-700);
+                color: #fff;
+            }
+        }
+    }
+}
