@@ -30,14 +30,14 @@ export default function Step2() {
 
         <p>Endereço</p>
 
-        <span>CEP</span>
-        <input type="number" placeholder="19800-000" /> 
-
         <span>Rua</span>
         <input type="text" placeholder="Rua Da Minha Casa" />              
         
         <span>Número</span>
         <input type="number" placeholder="123" />
+
+        <span>Complemento</span>
+        <input type="number" placeholder="Ap 1" /> 
 
         <span>Cidade</span>
         <input type="text" placeholder="Assis" />
