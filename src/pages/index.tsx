@@ -46,6 +46,10 @@ export default function Home() {
           </Link>
         </p>
       </section>
+
+      <ul className={styles.roundLines}>
+        <li></li>
+      </ul>
     </div>
   )
 }
