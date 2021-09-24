@@ -1,12 +1,19 @@
-import React from "react"
+import React, {useState} from "react"
 import styles from '../styles.module.scss'
 
 import Image from 'next/image'
 import Link from "next/Link"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import TermsDeliveryman from "../../../../modals/TermsDeliveryman"
 
 export default function Step1() {
+  const [isTermsVisible, setIsTermsVisible] = useState(false)
+
+  const showTerms = () => {
+      setIsTermsVisible(true)
+  }
+
   return (
     <div className={styles.container}>
       <header>
@@ -50,7 +57,7 @@ export default function Step1() {
         <div className={styles.terms}>
           <input type="checkbox" name="" id="" />
 
-          <p>Li e aceito os <strong>Termos de Uso</strong></p>
+          <p>Li e aceito os <strong onClick={showTerms}>Termos de Uso</strong></p>
           {/* ainda estamos desenvolvendo os termos */}
         </div>
 
@@ -89,6 +96,9 @@ export default function Step1() {
           <button className={styles.cancel}>Cancelar meu cadastro</button>
         </Link>
       </section>
+      {isTermsVisible ? (
+        <TermsDeliveryman />
+      ) : null}
     </div>
   )
 }
