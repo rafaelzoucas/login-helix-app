@@ -26,7 +26,9 @@ export default function LoginClient() {
         <span>Senha</span>
         <input type="senha" placeholder="Digite sua senha" />
 
-        {/* <p>Esqueci minha senha</p> */}
+        <Link href="/esqueci-senha">
+          <p>Esqueci minha senha</p>
+        </Link>
 
         <button className={styles.enterButton}>Entrar</button>
 

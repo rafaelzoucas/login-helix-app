@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    gap: 1rem;
+
+    padding: 0 1rem;
+
+    h2 {
+        color: rgb(83, 83, 83);
+        margin-bottom: 1.5rem;
+    }
+
+    h6 {
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        color: rgb(110, 110, 110);
+    }
+
+    input {
+        width: 100%;
+        max-width: 425px;
+        padding: 0 1rem; 
+    }
+
+    button {
+        width: 100%;
+        max-width: 425px;
+        // height: 3rem;
+
+        background: var(--orange-700);
+        color: #fff;
+
+        font-weight: 600;
+        font-size: 1.25em;
+
+        margin-bottom: 0.5rem;
+
+        transition: filter 0.2s;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+
+    p {
+        font-size: 1em;
+        cursor: pointer;
+        color: var(--orange-700);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
